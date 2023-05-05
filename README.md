@@ -18,9 +18,9 @@ This app was created for the Chingu voyage v44.
 
 ## Features:
 ---
-- [] Responsive Design 
-- [] Pure Vanilla Javascript
-- []
+- [ ] Responsive Design 
+- [ ] Pure Vanilla Javascript
+- [ ]
 ---
 
 # Acknowledgments
