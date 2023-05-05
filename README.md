@@ -18,11 +18,11 @@ This app was created for the Chingu voyage v44.
 
 ## Features:
 ---
-- [] Responsive Design 
+- Responsive Design 
 <br>
-- [] Pure Vanilla Javascript
+- Pure Vanilla Javascript
 <br>
-- []
+-
 ---
 
 # Acknowledgments
