@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet"> 
     <script defer src="index.js"></script>
 
     <title>Team 04 Array Game</title>
@@ -13,5 +14,20 @@
 
   <body>
     <h1>This is the Array Game created by Team 04</h1>
-  </body>
+      <div class="end-game-modal" id="end-game-modal">
+        <div class="outer-end-game-container">
+          <div class="close-end-game-container">
+            <button class="close-end-game-btn" id="close-end-game-btn">X</button>
+          </div>
+          <div class="inner-end-game-container">
+              <h2 class="end-game-message" id="end-game-message">Good Game!</h2>
+              <div class="end-game-score-display-container">
+                <p class="end-game-score">Score:<span id="end-game-score"></span></p>
+              </div>
+              <button class="end-game-new-game-btn" id="end-game-new-game-btn" >Play Again?</button>
+
+          </div>
+        </div>
+      </div>
+  </body >
 </html>
