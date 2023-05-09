@@ -27,7 +27,7 @@ This app was created for the Chingu voyage v44.
 ## Authors
 - []()
 - []()
-- []()
+- [Tyler Thietje](https://github.com/tylerthietje)
 - [Josh Catlett](https://github.com/xITSDUCKYx) aka (xITSDUCKYx)
 ---
 ## Dependencies
