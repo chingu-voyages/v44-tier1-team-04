@@ -1,0 +1,196 @@
+html {
+  font-size: 16px;
+  font-family: "Press Start 2P", cursive;
+  background-image: url("../img/pexels-mike-van-schoonderwalt-5505122.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/*--------- General Styles -----------*/
+
+.page-top {
+  margin-top: 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+footer p {
+  font-size: 0.575em;
+  margin: 25px;
+}
+
+footer a i {
+  font-size: 3em;
+  margin-right: 25px;
+}
+
+/*------ Leaderboard ----------*/
+
+.leaderboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.player-1,
+.player-2 {
+  text-align: center;
+}
+
+.ldb-display {
+  width: 200px;
+  margin: 10px;
+  background: #080001;
+  border-radius: 5px;
+  font-size: 1.75em;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+}
+
+/*---------- Container and Grid ----------------*/
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#grid-container {
+  width: 400px;
+  height: 400px;
+  background-color: #d9d9d9;
+}
+
+/*--------- Buttons ----------*/
+
+button {
+  border: none;
+  padding: 15px;
+  color: white;
+  width: 250px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 1.125em;
+  display: flex;
+  justify-content: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+.dice {
+  background-color: green;
+}
+
+.end-game {
+  background-color: #ff0000;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    background-size: 100vw 100vh;
+  }
+
+  .page-top {
+    margin-top: 40px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: row;
+  }
+
+  footer p {
+    font-size: 0.825em;
+  }
+
+  footer a i {
+    font-size: 3.5em;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  /*------ Leaderboard ----------*/
+
+  .leaderboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .player-1,
+  .player-2 {
+    text-align: center;
+  }
+
+  .ldb-display {
+    width: 210px;
+    margin: 10px;
+    background: #080001;
+    border-radius: 5px;
+    font-size: 2em;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+  }
+
+  /*---------- Container and Grid ----------------*/
+
+  .container {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  #grid-container {
+    width: 400px;
+    height: 400px;
+    background-color: #d9d9d9;
+  }
+
+  /*--------- Buttons ----------*/
+
+  button {
+    border: none;
+    padding: 15px;
+    color: white;
+    width: 250px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+    font-family: "Press Start 2P", cursive;
+  }
+
+  .dice {
+    background-color: green;
+  }
+
+  .end-game {
+    background-color: #ff0000;
+  }
+}
