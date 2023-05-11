@@ -4,17 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet"> 
+    <script
+      src="https://kit.fontawesome.com/851579e5dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
     <script defer src="index.js"></script>
 
     <title>Team 04 Array Game</title>
-
   </head>
 
   <body>
-    
-      <div class="end-game-modal" id="end-game-modal">
+    <div class="page-top">
+      <h1>Have fun and good luck!</h1>
+    </div>
+
+    <!-------- Leaderboard ---------->
+    <div class="leaderboard">
+      <div class="player-1">
+        <h4>Player 1</h4>
+        <div class="ldb-display" id="scoreOne">0</div>
+      </div>
+      <div class="player-2">
+        <h4>Player 2</h4>
+        <div class="ldb-display" id="scoreTwo">0</div>
+      </div>
+    </div>
+
+    <!----------- Container ------------>
+    <div class="container">
+      <!----- Dice Button ----->
+      <div>
+        <button class="dice" id="dice">Roll the dice!</button>
+
+        <!------ End Game Button ------>
+        <button class="end-game" id="end-game">No more moves?</button>
+      </div>
+
+      <!----- Grid ------>
+
+      <div id="grid-container">This is a grid</div>
+    </div>
+
+    <!----------- Footer ------------->
+    <footer>
+      <div>
+        <p>Created by Team 4 Chingu Voyage 44</p>
+      </div>
+      <div>
+        <a
+          href="https://github.com/chingu-voyages/v44-tier1-team-04"
+          target="_blank"
+          alt="GitHub link"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        
+        <div class="end-game-modal" id="end-game-modal">
         <div class="outer-end-game-container">
           <div class="close-end-game-container">
             <button class="close-end-game-btn" id="close-end-game-btn">X</button>
@@ -28,6 +81,8 @@
 
           </div>
         </div>
+
       </div>
-  </body >
+    </footer>
+  </body>
 </html>
