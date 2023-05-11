@@ -3,6 +3,7 @@ html {
   font-family: "Press Start 2P", cursive;
   background-image: url("../img/pexels-mike-van-schoonderwalt-5505122.jpg");
   background-position: center;
+  
   background-size: cover;
 }
 
@@ -184,6 +185,18 @@ button {
     display: flex;
     flex-direction: column;
     font-family: "Press Start 2P", cursive;
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+    cursor: pointer;
+  
+  }
+
+  button:hover {
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    filter: brightness(80%); 
+    
   }
 
   .dice {
@@ -194,3 +207,58 @@ button {
     background-color: #ff0000;
   }
 }
+
+/*---------End Game Modal----------*/
+
+.end-game-message {
+  font-size: 1.75rem;
+}
+
+.end-game-score{
+  font-size: 1.25rem;
+}
+
+
+
+
+
+.end-game-modal {
+ 
+  background-color: rgb(108, 156, 213, .85);
+  width: 40%;
+  min-width: 300px;
+  text-align: center;
+  aspect-ratio: 1/1;
+  color:rgb(247, 244, 244)
+}
+
+.end-game-modal::backdrop {
+  background-color: rgba(108, 156, 213, 0.6);
+}
+
+
+.end-game-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.end-game-message,
+.end-game-score {
+  text-shadow: 0 0 120px rgb(247, 244, 244);
+}
+
+.end-game-new-game-btn {
+  background-color: green;
+   
+}
+
+@media only screen and (max-width: 768px) {
+    .end-game-message,
+    .end-game-new-game-btn {
+    font-size: 1.2rem;
+  }
+}
+
+
