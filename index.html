@@ -22,8 +22,9 @@
   </head>
 
   <body>
+
     <div class="page-top">
-      <h1>Have fun and good luck!</h1>
+      <h1>Have fun and good luck <span id="name"></span>!</h1>
     </div>
               
 
@@ -73,7 +74,7 @@
 
 <!---------------- Start Game Modal ----------------->
 
-<div class="modal">
+<div class="modal " id="startModal">
       <div class="modal-content">
         <h1>Let's Play the Array Game!</h1>
         <div class="player-name">
@@ -85,7 +86,12 @@
             name="playername"
           />
         </div>
-        <button type="button" class="play-btn">Let's Play!</button>
+        <button 
+            type="button" 
+            class="play-btn" 
+            onclick=closeModal()           >
+            Let's Play!
+        </button>
       </div>
     </div>
 
