@@ -221,7 +221,10 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
-  /* Delete 'hidden' on previous line to see the modal */
+}
+
+.show-modal {
+  visibility: visible;
 }
 
 .modal-content {
