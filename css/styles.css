@@ -9,7 +9,6 @@ html {
   font-family: "Press Start 2P", cursive;
 }
 
-
 /*--------- General Styles -----------*/
 
 .page-top {
@@ -22,20 +21,20 @@ h1 {
 
 footer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  /* align-content: center; */
+  margin-top: 40px;
 }
 
 footer p {
   font-size: 0.575em;
   margin: 25px;
+}
+
+footer a i {
+  font-size: 3em;
+  color: black;
 }
 
 footer a i {
@@ -79,9 +78,15 @@ footer a i {
 }
 
 #grid-container {
-  width: 400px;
-  height: 400px;
-  background-color: #d9d9d9;
+  display: flex;
+  width: auto;
+  height: auto;
+  background-color: rgba(169, 169, 169, 0.885);
+}
+
+.column {
+  padding: 22px;
+  border: 0.5px solid;
 }
 
 /*--------- Buttons ----------*/
@@ -166,12 +171,9 @@ button {
     flex-direction: row;
   }
 
-  #grid-container {
-    width: 400px;
-    height: 400px;
-    background-color: #d9d9d9;
+  .column {
+    padding: 25px;
   }
-
   /*--------- Buttons ----------*/
 
   button {
@@ -185,18 +187,16 @@ button {
     display: flex;
     flex-direction: column;
     font-family: "Press Start 2P", cursive;
-    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
     transform: translateY(-2px);
     cursor: pointer;
-  
   }
 
   button:hover {
-    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
     transform: translateY(0);
     transition: transform 150ms, box-shadow 150ms;
-    filter: brightness(80%); 
-    
+    filter: brightness(80%);
   }
 
   .dice {
@@ -237,7 +237,7 @@ button {
   justify-content: space-between;
   align-items: center;
   width: 600px;
-  height: 400px;  
+  height: 400px;
 }
 
 .player-name {
@@ -261,34 +261,28 @@ input {
   font-size: 1.75rem;
 }
 
-.end-game-score{
+.end-game-score {
   font-size: 1.25rem;
 }
 
-
-
-
-
 .end-game-modal {
- 
-  background-color: rgb(108, 156, 213, .85);
+  background-color: rgb(108, 156, 213, 0.85);
   width: 40%;
   min-width: 300px;
   text-align: center;
   aspect-ratio: 1/1;
-  color:rgb(247, 244, 244)
+  color: rgb(247, 244, 244);
 }
 
 .end-game-modal::backdrop {
   background-color: rgba(108, 156, 213, 0.6);
 }
 
-
 .end-game-container {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .end-game-message,
@@ -298,14 +292,11 @@ input {
 
 .end-game-new-game-btn {
   background-color: green;
-   
 }
 
 @media only screen and (max-width: 768px) {
-    .end-game-message,
-    .end-game-new-game-btn {
+  .end-game-message,
+  .end-game-new-game-btn {
     font-size: 1.2rem;
   }
 }
-
-

@@ -22,11 +22,9 @@
   </head>
 
   <body>
-
     <div class="page-top">
       <h1>Have fun and good luck <span id="name"></span>!</h1>
     </div>
-              
 
     <!-------- Leaderboard ---------->
     <div class="leaderboard">
@@ -52,29 +50,29 @@
 
       <!----- Grid ------>
 
-      <div id="grid-container">This is a grid</div>
+      <div id="grid-container"></div>
     </div>
 
     <!----------- Footer ------------->
     <footer>
-      <div class="footer">
+      <div>
         <p>Created by Team 4 Chingu Voyage 44</p>
-        <div>
-            <a
-            href="https://github.com/chingu-voyages/v44-tier1-team-04"
-            rel="noopener"
-            aria-label="GitHub"
-            target="_blank"
-            alt="GitHub link"
-            >
-            <i class="fa-brands fa-github"></i>
+      </div>
+      <div>
+        <a
+          href="https://github.com/chingu-voyages/v44-tier1-team-04"
+          rel="noopener"
+          aria-label="GitHub"
+          target="_blank"
+          alt="GitHub link"
+        >
+          <i class="fa-brands fa-github"></i>
         </a>
-    </div> 
-</div>
+      </div>
+    </footer>
+    <!---------------- Start Game Modal ----------------->
 
-<!---------------- Start Game Modal ----------------->
-
-<div class="modal " id="startModal">
+    <div class="modal" id="startModal">
       <div class="modal-content">
         <h1>Let's Play the Array Game!</h1>
         <div class="player-name">
@@ -86,27 +84,24 @@
             name="playername"
           />
         </div>
-        <button 
-            type="button" 
-            class="play-btn" 
-            onclick=closeModal()           >
-            Let's Play!
+        <button type="button" class="play-btn" onclick="closeModal()">
+          Let's Play!
         </button>
       </div>
     </div>
 
-      
-      <!--------- End Game Game --------->
+    <!--------- End Game Game --------->
 
-      <dialog class="end-game-modal" id="end-game-modal">
-         <div class="end-game-container">
-              <h2 class="end-game-message" id="end-game-message">Good Game!</h2>
-                <div class="end-game-score-display-container">
-                  <p class="end-game-score">Score:<span id="end-game-score"></span></p>
-                </div>
-              <button class="end-game-new-game-btn" id="end-game-new-game-btn" >Play Again?</button>
-         </div>
-      </dialog>
-    </footer>
+    <dialog class="end-game-modal" id="end-game-modal">
+      <div class="end-game-container">
+        <h2 class="end-game-message" id="end-game-message">Good Game!</h2>
+        <div class="end-game-score-display-container">
+          <p class="end-game-score">Score:<span id="end-game-score"></span></p>
+        </div>
+        <button class="end-game-new-game-btn" id="end-game-new-game-btn">
+          Play Again?
+        </button>
+      </div>
+    </dialog>
   </body>
 </html>
