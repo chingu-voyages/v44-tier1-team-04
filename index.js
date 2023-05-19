@@ -46,8 +46,12 @@ function createBoard() {
 
 /*-----------Dice roll------------- */
 function rollTheDice(){
+
+  //Initializes dice roll
   var d1 = Math.floor(Math.random()*6) + 1;
   var d2 = Math.floor(Math.random()*6) + 1;
+
+  //Prints dice rolls to console
   console.log(d1)
   console.log(d2)
 }
