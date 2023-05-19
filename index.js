@@ -44,4 +44,12 @@ function createBoard() {
   }
 }
 
+/*-----------Dice roll------------- */
+function rollTheDice(){
+  var d1 = Math.floor(Math.random()*6) + 1;
+  var d2 = Math.floor(Math.random()*6) + 1;
+  console.log(d1)
+  console.log(d2)
+}
+
 createBoard();
