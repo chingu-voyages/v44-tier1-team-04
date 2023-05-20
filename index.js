@@ -54,6 +54,12 @@ function rollTheDice(){
   //Prints dice rolls to console
   console.log(d1)
   console.log(d2)
+
+  var diceRoll1 = document.getElementById("dice1");
+  var diceRoll2 = document.getElementById("dice2");
+
+  diceRoll1.innerText = d1;
+  diceRoll2.innerText = d2;
 }
 
 createBoard();
