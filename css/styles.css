@@ -110,7 +110,7 @@ button {
   font-size: 1.125em;
   display: flex;
   justify-content: center;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Press Start 2P", cursive;;
 }
 
 .dice {
