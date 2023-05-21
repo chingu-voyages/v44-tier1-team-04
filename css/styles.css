@@ -88,7 +88,16 @@ footer a i {
   padding: 22px;
   border: 0.5px solid;
 }
+/*--------- Dice Box ----------*/
 
+.dice-box{
+  width: 250px;
+  height: 100px;
+  background-color: rgba(169, 169, 169, 0.885);
+}
+.box{
+  
+}
 /*--------- Buttons ----------*/
 
 button {
