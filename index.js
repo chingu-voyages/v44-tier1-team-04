@@ -1,3 +1,5 @@
+/* ------------ End Game Modal ----------- */
+
 const endGame = document.getElementById("end-game");
 const newGame = document.getElementById("end-game-new-game-btn");
 const endGameModal = document.getElementById("end-game-modal");
