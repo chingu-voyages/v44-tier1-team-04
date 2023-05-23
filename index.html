@@ -37,12 +37,19 @@
         <div class="ldb-display" id="scoreTwo">0</div>
       </div> -->
     </div>
-
     <!----------- Container ------------>
     <div class="container">
+      <!----------- Dice Box ------------>
+
       <!----- Dice Button ----->
       <div>
-        <button class="dice" id="dice" onclick="rollTheDice()">Roll the dice!</button>
+        <div class="dice-box">
+          <div class="box">Dice 1:<span id="dice1"></span></div>
+          <div class="box">Dice 2:<span id="dice2"></span></div>
+        </div>
+        <button class="dice" id="dice" onclick="rollTheDice()">
+          Roll the dice!
+        </button>
 
         <!------ End Game Button ------>
         <button class="end-game" id="end-game">No more moves?</button>
