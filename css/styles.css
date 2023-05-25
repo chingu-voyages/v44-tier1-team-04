@@ -81,7 +81,7 @@ footer a i {
   display: flex;
   width: auto;
   height: auto;
-  background-color: rgba(169, 169, 169, 0.885);
+  background-color: gray;
 }
 
 .column {
