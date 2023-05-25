@@ -48,13 +48,23 @@ function createBoard() {
 
 createBoard();
 
-//Squares change color on click
-let changeColor = document.querySelectorAll(".column");
-for (var x = 0; x < changeColor.length; x++) {
-  changeColor[x].onclick = function () {
-    this.style.backgroundColor = "aqua";
-  };
-}
+/*---------- Coloring the Boxes --------------*/
+
+let gridBox = document.querySelectorAll(".column");
+
+gridBox.forEach(function (gridBox){
+  let isGrey = true;
+  gridBox.addEventListener("click", () => {
+    if (isGrey) {
+      gridBox.style.backgroundColor = 'red';
+      isGrey = false;
+    } else {
+      gridBox.style.backgroundColor = 'grey';
+      isGrey = true;
+    }
+  
+  })
+})
 
 /*-----------Dice roll------------- */
 function rollTheDice() {
