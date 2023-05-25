@@ -46,16 +46,25 @@ function createBoard() {
   }
 }
 
-/*-----------Dice roll------------- */
-function rollTheDice(){
+createBoard();
 
+//Squares change color on click
+let changeColor = document.querySelectorAll(".column");
+for (var x = 0; x < changeColor.length; x++) {
+  changeColor[x].onclick = function () {
+    this.style.backgroundColor = "aqua";
+  };
+}
+
+/*-----------Dice roll------------- */
+function rollTheDice() {
   //Initializes dice roll
-  var d1 = Math.floor(Math.random()*6) + 1;
-  var d2 = Math.floor(Math.random()*6) + 1;
+  var d1 = Math.floor(Math.random() * 6) + 1;
+  var d2 = Math.floor(Math.random() * 6) + 1;
 
   //Prints dice rolls to console
-  console.log(d1)
-  console.log(d2)
+  console.log(d1);
+  console.log(d2);
 
   var diceRoll1 = document.getElementById("dice1");
   var diceRoll2 = document.getElementById("dice2");
@@ -63,5 +72,3 @@ function rollTheDice(){
   diceRoll1.innerText = d1;
   diceRoll2.innerText = d2;
 }
-
-createBoard();
