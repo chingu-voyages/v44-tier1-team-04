@@ -53,7 +53,7 @@ gridBox.forEach(function (gridBox){
   let isGrey = true;
   gridBox.addEventListener("click", () => {
     if (isGrey) {
-      gridBox.style.backgroundColor = 'red';
+      gridBox.style.backgroundColor = 'aqua';
       isGrey = false;
     } else {
       gridBox.style.backgroundColor = 'grey';
