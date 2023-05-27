@@ -1,9 +1,9 @@
 /* ------------ End Game Modal ----------- */
 
-const endGame = document.getElementById("end-game");
-const newGame = document.getElementById("end-game-new-game-btn");
-const endGameModal = document.getElementById("end-game-modal");
-document.addEventListener("click", function (e) {
+const endGame = document.getElementById('end-game');
+const newGame = document.getElementById('end-game-new-game-btn');
+const endGameModal = document.getElementById('end-game-modal');
+document.addEventListener('click', function (e) {
   // console.log(e.target)
   if (e.target === endGame) {
     endGameModal.showModal();
@@ -14,33 +14,33 @@ document.addEventListener("click", function (e) {
 
 /* ---------- Start Game Modal ---------- */
 
-const modal = document.getElementById("startModal");
+const modal = document.getElementById('startModal');
 
 window.onload = function displayModal() {
-  modal.classList.add("show-modal");
+  modal.classList.add('show-modal');
 };
 
 function closeModal() {
-  const inputElement = document.getElementById("playername");
+  const inputElement = document.getElementById('playername');
   const inputValue = inputElement.value;
   const name = inputValue;
 
-  document.getElementById("name").innerText = `${name}`;
-  modal.classList.remove("show-modal");
+  document.getElementById('name').innerText = `${name}`;
+  modal.classList.remove('show-modal');
 }
 
 /*------------- Grid ----------------*/
 
 function createBoard() {
-  const box = "";
+  const box = '';
   for (let a = 0; a < 10; a++) {
-    var row = document.createElement("div");
-    document.getElementById("grid-container").appendChild(row);
-    row.className = "row";
+    var row = document.createElement('div');
+    document.getElementById('grid-container').appendChild(row);
+    row.className = 'row';
     for (let b = 0; b < 10; b++) {
-      var column = document.createElement("div");
+      var column = document.createElement('div');
       column.innerHTML = box;
-      column.className = "column";
+      column.className = 'column';
       row.appendChild(column);
     }
   }
@@ -50,20 +50,27 @@ createBoard();
 
 /*---------- Coloring the Boxes --------------*/
 
-let gridBox = document.querySelectorAll(".column");
+let gridBox = document.querySelectorAll('.column');
 
 gridBox.forEach(function (gridBox) {
-  let isGrey = true;
-  gridBox.addEventListener("click", () => {
-    if (isGrey) {
-      gridBox.style.backgroundColor = "red";
-      isGrey = false;
+  gridBox.addEventListener('mousedown', () => {
+    let currentColor = gridBox.style.backgroundColor;
+    
+    if (currentColor === "gray" || currentColor === "") {
+      gridBox.style.backgroundColor = 'aqua';
     } else {
-      gridBox.style.backgroundColor = "grey";
-      isGrey = true;
+      gridBox.style.backgroundColor = 'gray';
     }
   });
 });
+
+/*-----------Clearing the Grid------------*/
+function clearBoard() {
+  const squares = document.querySelectorAll('.column');
+  squares.forEach((column) => {
+    column.style.backgroundColor = 'gray';
+  });
+}
 
 /*-----------Dice roll------------- */
 function rollTheDice() {
@@ -75,17 +82,9 @@ function rollTheDice() {
   console.log(d1);
   console.log(d2);
 
-  var diceRoll1 = document.getElementById("dice1");
-  var diceRoll2 = document.getElementById("dice2");
+  var diceRoll1 = document.getElementById('dice1');
+  var diceRoll2 = document.getElementById('dice2');
 
   diceRoll1.innerText = d1;
   diceRoll2.innerText = d2;
-}
-
-/*-----------Clearing the Grid------------*/
-function clearBoard() {
-  const squares = document.querySelectorAll(".column");
-  squares.forEach((column) => {
-    column.style.backgroundColor = "gray";
-  });
 }
