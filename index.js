@@ -52,19 +52,18 @@ createBoard();
 
 let gridBox = document.querySelectorAll(".column");
 
-gridBox.forEach(function (gridBox){
+gridBox.forEach(function (gridBox) {
   let isGrey = true;
   gridBox.addEventListener("click", () => {
     if (isGrey) {
-      gridBox.style.backgroundColor = 'red';
+      gridBox.style.backgroundColor = "red";
       isGrey = false;
     } else {
-      gridBox.style.backgroundColor = 'grey';
+      gridBox.style.backgroundColor = "grey";
       isGrey = true;
     }
-  
-  })
-})
+  });
+});
 
 /*-----------Dice roll------------- */
 function rollTheDice() {
@@ -82,3 +81,5 @@ function rollTheDice() {
   diceRoll1.innerText = d1;
   diceRoll2.innerText = d2;
 }
+
+/*-----------Clearing the Grid------------*/
