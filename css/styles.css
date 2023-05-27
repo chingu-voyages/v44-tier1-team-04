@@ -51,13 +51,13 @@ footer a i {
   flex-direction: row;
 }
 
-.player-1,
-.player-2 {
+.wins,
+.losses {
   text-align: center;
 }
 
 .ldb-display {
-  width: 200px;
+  width: 220px;
   margin: 10px;
   background: #080001;
   border-radius: 5px;
@@ -90,7 +90,7 @@ footer a i {
 }
 /*--------- Dice Box ----------*/
 
-.dice-box{
+.dice-box {
   width: 250px;
   height: 200px;
   padding: 15px;
@@ -101,14 +101,15 @@ footer a i {
   margin-bottom: 20px;
   display: flex;
   align-items: stretch;
-  justify-content: space-evenly;  
+  justify-content: space-evenly;
 }
 .box {
   border: 1px solid black;
   padding: 5px;
 }
 
-#dice1, #dice2 {
+#dice1,
+#dice2 {
   display: block;
   font-size: 3em;
   margin-top: 1em;
@@ -126,7 +127,7 @@ button {
   font-size: 1.125em;
   display: flex;
   justify-content: center;
-  font-family: "Press Start 2P", cursive;;
+  font-family: "Press Start 2P", cursive;
 }
 
 .dice {
@@ -135,7 +136,11 @@ button {
 
 .end-game {
   background-color: #ff0000;
-  margin-bottom: 40px;
+}
+
+.clear-board {
+  background-color: blue;
+  padding: 15px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -161,7 +166,6 @@ button {
     margin-right: 25px;
   }
   /*--------- Dice Box ----------*/
-
 
   /*------ Leaderboard ----------*/
 
