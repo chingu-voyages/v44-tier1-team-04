@@ -83,3 +83,9 @@ function rollTheDice() {
 }
 
 /*-----------Clearing the Grid------------*/
+function clearBoard() {
+  const squares = document.querySelectorAll(".column");
+  squares.forEach((column) => {
+    column.style.backgroundColor = "gray";
+  });
+}
