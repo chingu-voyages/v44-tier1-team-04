@@ -25,6 +25,7 @@ document.addEventListener('click', function (e) {
   if (e.target === endGame) {
     endGameModal.showModal();
   } else if (e.target === newGame) {
+    clearBoard();
     endGameModal.close();
   }
 });
@@ -52,25 +53,19 @@ createBoard();
 
 let gridBox = document.querySelectorAll('.column');
 
-gridBox.forEach(function (gridBox) {
-  gridBox.addEventListener('mousedown', () => {
-    let currentColor = gridBox.style.backgroundColor;
-    
-    if (currentColor === "gray" || currentColor === "") {
-      gridBox.style.backgroundColor = 'aqua';
+gridBox.forEach(function (gridBox){
+  let isGrey = true;
+  gridBox.addEventListener("click", () => {
+    if (isGrey) {
+      gridBox.style.backgroundColor = 'red';
+      isGrey = false;
     } else {
-      gridBox.style.backgroundColor = 'gray';
+      gridBox.style.backgroundColor = 'grey';
+      isGrey = true;
     }
-  });
-});
-
-/*-----------Clearing the Grid------------*/
-function clearBoard() {
-  const squares = document.querySelectorAll('.column');
-  squares.forEach((column) => {
-    column.style.backgroundColor = 'gray';
-  });
-}
+  
+  })
+})
 
 /*-----------Dice roll------------- */
 function rollTheDice() {
