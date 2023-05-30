@@ -53,37 +53,19 @@ createBoard();
 
 let gridBox = document.querySelectorAll('.column');
 
-gridBox.forEach(function (gridBox) {
-  gridBox.addEventListener('mousedown', () => {
-    let currentColor = gridBox.style.backgroundColor;
-    
-    if (currentColor === "gray" || currentColor === "") {
-        gridBox.style.backgroundColor = 'aqua';
-      } else {
-      gridBox.style.backgroundColor = 'gray';
+gridBox.forEach(function (gridBox){
+  let isGrey = true;
+  gridBox.addEventListener("click", () => {
+    if (isGrey) {
+      gridBox.style.backgroundColor = 'red';
+      isGrey = false;
+    } else {
+      gridBox.style.backgroundColor = 'grey';
+      isGrey = true;
     }
-  });
-});
-
-/*-----------Clearing the Grid------------*/
-function clearBoard() {
-  const squares = document.querySelectorAll('.column');
   
-  const diceElements = ["dice1", "dice2"];
-  
-  squares.forEach((column) => {
-    column.style.backgroundColor = 'gray';
-  });
-
-  diceElements.forEach(function(elementId){
-    const diceElement = document.getElementById(elementId);
-    diceElement.innerText = "";
-    diceElement.value = 0;
   })
-
-
- 
-}
+})
 
 /*-----------Dice roll------------- */
 function rollTheDice() {
