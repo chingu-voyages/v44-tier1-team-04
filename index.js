@@ -25,8 +25,8 @@ document.addEventListener('click', function (e) {
   if (e.target === endGame) {
     endGameModal.showModal();
   } else if (e.target === newGame) {
-    endGameModal.close();
     clearBoard();
+    endGameModal.close();
   }
 });
 
