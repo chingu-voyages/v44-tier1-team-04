@@ -52,13 +52,15 @@ createBoard();
 /*---------- Coloring the Boxes --------------*/
 
 let gridBox = document.querySelectorAll('.column');
-
+let diceBtn = document.getElementById('dice');
+let sum = 0;
 gridBox.forEach(function (gridBox){
   let isGrey = true;
   gridBox.addEventListener("click", () => {
     if (isGrey) {
       gridBox.style.backgroundColor = 'red';
       isGrey = false;
+      sum += 1;
     } else {
       gridBox.style.backgroundColor = 'grey';
       isGrey = true;
@@ -72,10 +74,21 @@ function rollTheDice() {
   //Initializes dice roll
   var d1 = Math.floor(Math.random() * 6) + 1;
   var d2 = Math.floor(Math.random() * 6) + 1;
+  var total = d1+d2;
 
   var diceRoll1 = document.getElementById('dice1');
   var diceRoll2 = document.getElementById('dice2');
 
   diceRoll1.innerText = d1;
   diceRoll2.innerText = d2;
+  return total;
 }
+var getTotal = rollTheDice();
+/* Disables button if not all squares are colored */
+if(sum == getTotal){
+  diceBtn.disabled = false;
+}else{
+  diceBtn.disabled = true;
+}
+
+
