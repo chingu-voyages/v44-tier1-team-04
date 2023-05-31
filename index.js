@@ -26,6 +26,7 @@ document.addEventListener('click', function (e) {
     endGameModal.showModal();
   } else if (e.target === newGame) {
     endGameModal.close();
+    clearBoard();
   }
 });
 
@@ -70,6 +71,7 @@ function clearBoard() {
   squares.forEach((column) => {
     column.style.backgroundColor = 'gray';
   });
+  
 }
 
 /*-----------Dice roll------------- */
