@@ -53,19 +53,26 @@ createBoard();
 
 let gridBox = document.querySelectorAll('.column');
 
-gridBox.forEach(function (gridBox){
-  let isGrey = true;
-  gridBox.addEventListener("click", () => {
-    if (isGrey) {
-      gridBox.style.backgroundColor = 'red';
-      isGrey = false;
+gridBox.forEach(function (gridBox) {
+  gridBox.addEventListener('mousedown', () => {
+    let currentColor = gridBox.style.backgroundColor;
+    
+    if (currentColor === "gray" || currentColor === "") {
+      gridBox.style.backgroundColor = 'aqua';
     } else {
-      gridBox.style.backgroundColor = 'grey';
-      isGrey = true;
+      gridBox.style.backgroundColor = 'gray';
     }
+  });
+});
+
+/*-----------Clearing the Grid------------*/
+function clearBoard() {
+  const squares = document.querySelectorAll('.column');
+  squares.forEach((column) => {
+    column.style.backgroundColor = 'gray';
+  });
   
-  })
-})
+}
 
 /*-----------Dice roll------------- */
 function rollTheDice() {
