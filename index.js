@@ -1,5 +1,10 @@
-/* ---------- Start Game Modal ---------- */
+/* ---------- Global Variables ---------- */
+const confirmBtn = document.querySelector("confirm-btn");
+const cancelBtn = document.querySelector("cancel-btn");
 
+
+
+/* ---------- Start Game Modal ---------- */
 const modal = document.getElementById("startModal");
 
 window.onload = function displayModal() {
@@ -13,6 +18,18 @@ function closeModal() {
 
   document.getElementById("name").innerText = `${name}`;
   modal.classList.remove("show-modal");
+}
+
+/* ---------- New Game Alert Modal ---------- */
+
+const alertModal = document.getElementById("newGameAlertModal");
+
+function displayAlertModal() {
+  alertModal.classList.add("show-modal");
+};
+
+function closeAlertModal() {  
+  alertModal.classList.remove("show-modal");
 }
 
 /* ------------ End Game Modal ----------- */
@@ -84,7 +101,7 @@ function clearBoard() {
   squares.forEach((column) => {
     column.style.backgroundColor = "gray";
   });
-  alert("Are you sure you want to end your current game?")
+  displayAlertModal();
 }
 
 /*----------- Clearing the Dice ------------*/

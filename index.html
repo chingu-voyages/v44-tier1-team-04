@@ -111,6 +111,26 @@
         </button>
       </div>
     </div>
+    
+    <!---------------- New Game Alert Modal ----------------->
+
+    <div class="modal" id="newGameAlertModal">
+      <div class="modal-content">
+        <h1>Are you sure you want to start a new game? Your current progress will be lost.</h1>
+        <button 
+          class="confirm-btn green-btn"
+          onclick="clearBoard(),
+                   clearDiceBoard(),
+                   closeAlertModal()"
+          >
+          Start Over</button>
+        <button 
+          class="cancel-btn red-btn" 
+          onclick="closeAlertModal()"
+          >
+          Take Me Back</button>
+        
+    </div>
 
     <!--------- End Game Game --------->
 
@@ -126,14 +146,5 @@
       </div>
     </dialog>
 
-    <!---------------- New Game Alert Modal ----------------->
-
-    <div class="modal show-modal" id="newGameAlertModal">
-      <div class="modal-content">
-        <h1>Are you sure you want to start a new game? Your current progress will be lost.</h1>
-        <button class="green-btn">Start Over</button>
-        <button class="red-btn">Take Me Back</button>
-        
-    </div>
   </body>
 </html>
