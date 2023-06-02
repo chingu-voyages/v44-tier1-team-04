@@ -52,11 +52,17 @@
         </button>
 
         <!------ End Game Button ------>
-        <button class="end-game" id="end-game">No more moves?</button>
+        <button 
+          class="end-game" 
+          id="end-game" 
+          onclick="clearDiceBoard()"
+          >
+          No more moves?
+        </button>
 
         <!------ Clear Board Button ------>
         <button
-          onclick="clearBoard(); clearDiceBoard()"
+          onclick="displayAlertModal()"
           class="clear-board"
           id="clear-board"
         >
@@ -100,10 +106,30 @@
             name="playername"
           />
         </div>
-        <button type="button" class="play-btn" onclick="closeModal()">
+        <button type="button" class="green-btn" onclick="closeModal()">
           Let's Play!
         </button>
       </div>
+    </div>
+    
+    <!---------------- New Game Alert Modal ----------------->
+
+    <div class="modal" id="newGameAlertModal">
+      <div class="modal-content">
+        <h1>Are you sure you want to start a new game? Your current progress will be lost.</h1>
+        <button 
+          class="confirm-btn green-btn"
+          onclick="clearBoard(),
+                   clearDiceBoard(),
+                   closeAlertModal()"
+          >
+          Start Over</button>
+        <button 
+          class="cancel-btn red-btn" 
+          onclick="closeAlertModal()"
+          >
+          Take Me Back</button>
+        
     </div>
 
     <!--------- End Game Game --------->
@@ -119,5 +145,6 @@
         </button>
       </div>
     </dialog>
+
   </body>
 </html>

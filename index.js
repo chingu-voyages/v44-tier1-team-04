@@ -1,5 +1,10 @@
-/* ---------- Start Game Modal ---------- */
+/* ---------- Global Variables ---------- */
+const confirmBtn = document.querySelector("confirm-btn");
+const cancelBtn = document.querySelector("cancel-btn");
 
+
+
+/* ---------- Start Game Modal ---------- */
 const modal = document.getElementById("startModal");
 
 window.onload = function displayModal() {
@@ -13,6 +18,18 @@ function closeModal() {
 
   document.getElementById("name").innerText = `${name}`;
   modal.classList.remove("show-modal");
+}
+
+/* ---------- New Game Alert Modal ---------- */
+
+const alertModal = document.getElementById("newGameAlertModal");
+
+function displayAlertModal() {
+  alertModal.classList.add("show-modal");
+};
+
+function closeAlertModal() {  
+  alertModal.classList.remove("show-modal");
 }
 
 /* ------------ End Game Modal ----------- */
@@ -65,7 +82,7 @@ gridBox.forEach(function (gridBox) {
   });
 });
 
-/*-----------Dice roll------------- */
+/*----------- Dice roll ------------- */
 function rollTheDice() {
   //Initializes dice roll
   var d1 = Math.floor(Math.random() * 6) + 1;
@@ -78,14 +95,16 @@ function rollTheDice() {
   diceRoll2.innerText = d2;
 }
 
-/*-----------Clearing the Grid------------*/
+/*----------- Clearing the Grid ------------*/
 function clearBoard() {
   const squares = document.querySelectorAll(".column");
   squares.forEach((column) => {
     column.style.backgroundColor = "gray";
   });
+  displayAlertModal();
 }
 
+/*----------- Clearing the Dice ------------*/
 function clearDiceBoard() {
   document.getElementById("dice1").textContent = "";
   document.getElementById("dice2").textContent = "";
