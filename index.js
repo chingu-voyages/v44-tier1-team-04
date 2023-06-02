@@ -65,7 +65,7 @@ gridBox.forEach(function (gridBox) {
   });
 });
 
-/*-----------Dice roll------------- */
+/*----------- Dice roll ------------- */
 function rollTheDice() {
   //Initializes dice roll
   var d1 = Math.floor(Math.random() * 6) + 1;
@@ -78,14 +78,16 @@ function rollTheDice() {
   diceRoll2.innerText = d2;
 }
 
-/*-----------Clearing the Grid------------*/
+/*----------- Clearing the Grid ------------*/
 function clearBoard() {
   const squares = document.querySelectorAll(".column");
   squares.forEach((column) => {
     column.style.backgroundColor = "gray";
   });
+  alert("Are you sure you want to end your current game?")
 }
 
+/*----------- Clearing the Dice ------------*/
 function clearDiceBoard() {
   document.getElementById("dice1").textContent = "";
   document.getElementById("dice2").textContent = "";

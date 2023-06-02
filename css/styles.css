@@ -217,6 +217,7 @@ button {
     font-size: 1.25em;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: "Press Start 2P", cursive;
     box-shadow: rgba(0, 0, 0, .5) 0 3px 9px 0;
     transform: translateY(-2px);
@@ -239,7 +240,7 @@ button {
   }
 }
 
-/*--------- Start Game Modal ----------- */
+/*--------- Start Game and New Game Aler Modal Styles ----------- */
 
 .modal {
   display: flex;
@@ -282,10 +283,22 @@ input {
   text-indent: 10px;
 }
 
-.play-btn {
+.green-btn {
   background-color: green;
 }
 
+.red-btn {
+  background-color: red;
+}
+
+#newGameAlertModal {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#newGameAlertModal h1 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
 /*---------End Game Modal----------*/
 
 .end-game-message {
