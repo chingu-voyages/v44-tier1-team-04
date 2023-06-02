@@ -101,7 +101,6 @@ function clearBoard() {
   squares.forEach((column) => {
     column.style.backgroundColor = "gray";
   });
-  displayAlertModal();
 }
 
 /*----------- Clearing the Dice ------------*/
