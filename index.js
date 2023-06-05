@@ -43,6 +43,7 @@ document.addEventListener("click", function (e) {
     endGameModal.showModal();
   } else if (e.target === newGame) {
     clearBoard();
+    updateLearderboard();
     endGameModal.close();
   }
 });
@@ -65,6 +66,18 @@ function createBoard() {
 }
 
 createBoard();
+/*---------- Updates the leaderboard --------------*/
+const winDisplayEl = document.getElementById("scoreOne")
+const lossDisplayEl = document.getElementById("scoreTwo")
+let isWinner = false;
+let wins = 0;
+let losses = 0;
+
+function updateLearderboard(){
+  isWinner ? wins++ : losses++
+  winDisplayEl.textContent = wins
+  lossDisplayEl.textContent = losses
+}
 
 /*---------- Coloring the Boxes --------------*/
 
