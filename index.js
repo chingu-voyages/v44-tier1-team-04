@@ -52,6 +52,9 @@ createBoard();
 /*---------- Coloring the Boxes --------------*/
 
 let gridBox = document.querySelectorAll('.column');
+let diceBtn = document.getElementById('dice');
+var aquaCount = 0;
+//var grayCount = 0;
 
 gridBox.forEach(function (gridBox) {
   gridBox.addEventListener('mousedown', () => {
@@ -59,12 +62,14 @@ gridBox.forEach(function (gridBox) {
     
     if (currentColor === "gray" || currentColor === "") {
       gridBox.style.backgroundColor = 'aqua';
+      aquaCount += 1;
+      console.log(aquaCount);
     } else {
       gridBox.style.backgroundColor = 'gray';
     }
   });
+  
 });
-
 /*-----------Clearing the Grid------------*/
 function clearBoard() {
   const squares = document.querySelectorAll('.column');
@@ -75,25 +80,34 @@ function clearBoard() {
 }
 
 /*-----------Dice roll------------- */
+var total = 0;
 function rollTheDice() {
   //Initializes dice roll
   var d1 = Math.floor(Math.random() * 6) + 1;
   var d2 = Math.floor(Math.random() * 6) + 1;
-  var total = d1+d2;
+  total = d1*d2;
 
   var diceRoll1 = document.getElementById('dice1');
   var diceRoll2 = document.getElementById('dice2');
 
   diceRoll1.innerText = d1;
   diceRoll2.innerText = d2;
+  console.log(total);
+  diceBtn.disabled = true;
   return total;
 }
-var getTotal = rollTheDice();
-/* Disables button if not all squares are colored */
-if(sum == getTotal){
+
+  function submitHandler () {
+    diceBtn.disabled = false;
+  }
+/*
+console.log(totalDice)
+console.log(sum == totalDice.total)
+if (sum == totalDice.total){
   diceBtn.disabled = false;
 }else{
   diceBtn.disabled = true;
-}
+}*/
+    
 
 
