@@ -80,56 +80,33 @@ function updateLearderboard(){
 }
 
 /*---------- Coloring the Boxes --------------*/
-let gridBox = document.querySelectorAll('.column');
-let diceBtn = document.getElementById('dice');
-var aquaCount = 0;
 
+let gridBox = document.querySelectorAll(".column");
 
 gridBox.forEach(function (gridBox) {
   gridBox.addEventListener("mousedown", () => {
     let currentColor = gridBox.style.backgroundColor;
 
     if (currentColor === "gray" || currentColor === "") {
-      gridBox.style.backgroundColor = 'aqua';
-      aquaCount += 1;
-      console.log(aquaCount);
+      gridBox.style.backgroundColor = "aqua";
     } else {
       gridBox.style.backgroundColor = "gray";
     }
   });
-  
 });
 
-/*-----------Clearing the Grid------------
-function clearBoard() {
-  const squares = document.querySelectorAll('.column');
-  squares.forEach((column) => {
-    column.style.backgroundColor = 'gray';
-  });
-  
-}
-*/
 /*----------- Dice roll ------------- */
-var total = 0;
 function rollTheDice() {
   //Initializes dice roll
   var d1 = Math.floor(Math.random() * 6) + 1;
   var d2 = Math.floor(Math.random() * 6) + 1;
-  total = d1*d2;
 
   var diceRoll1 = document.getElementById("dice1");
   var diceRoll2 = document.getElementById("dice2");
 
   diceRoll1.innerText = d1;
   diceRoll2.innerText = d2;
-  console.log(total);
-  diceBtn.disabled = true;
-  return total;
 }
-
-  function submitHandler () {
-    diceBtn.disabled = false;
-  }    
 
 /*----------- Clearing the Grid ------------*/
 function clearBoard() {
@@ -144,4 +121,3 @@ function clearDiceBoard() {
   document.getElementById("dice1").textContent = "";
   document.getElementById("dice2").textContent = "";
 }
-

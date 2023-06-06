@@ -232,21 +232,6 @@ button {
     filter: brightness(80%);
   }
 
-  .submit-container {
-    display:flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .submit-btn {
-  }
-  button:disabled,
-  button[disabled]{
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
-    transform: translateY(0);
-    transition: transform 150ms, box-shadow 150ms;
-    filter: brightness(80%);
-  }
-
   .dice {
     background-color: green;
   }
