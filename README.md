@@ -23,7 +23,8 @@ This app was created for the Chingu voyage v44.
 
 - [ ] Responsive Design
 - [ ] Pure Vanilla Javascript
-- [ ]
+- [ ] Vanilla CSS
+- [ ] [Link](https://chingu-voyages.github.io/v44-tier1-team-04/) to live project
 
 ---
 
@@ -31,7 +32,8 @@ This app was created for the Chingu voyage v44.
 
 ## Authors
 
-- []()
+- [Erica C]()
+- [Tom Bomb]()
 - [Natalia Baptista](https://github.com/nanab210)
 - [Tyler Thietje](https://github.com/tylerthietje)
 - [Josh Catlett](https://github.com/xITSDUCKYx) aka (xITSDUCKYx)
@@ -39,6 +41,8 @@ This app was created for the Chingu voyage v44.
 ---
 
 ## Dependencies
+
+- None
 
 ---
 
