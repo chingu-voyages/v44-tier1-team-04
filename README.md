@@ -21,13 +21,13 @@ This app was created for the Chingu voyage v44.
 
 ---
 
-- [ ] Responsive Design
-- [ ] Pure Vanilla Javascript
-- [ ] Vanilla CSS
+- Responsive Design
+- Pure Vanilla Javascript
+- Vanilla CSS
 
 ---
 ## Play the Array Game!
-- [ ] [Click to visit live project](https://chingu-voyages.github.io/v44-tier1-team-04/) to live project
+[Click Here](https://chingu-voyages.github.io/v44-tier1-team-04/) to visit the live project and play the game!
 
 ---
 # Acknowledgments
