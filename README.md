@@ -34,8 +34,8 @@ This app was created for the Chingu voyage v44.
 
 ## Authors
 
-- [Erica C]()
-- [Tom Bomb]()
+- [Erica Chong](https://github.com/chonger878)
+- [Tom Kramer](https://github.com/TomKramer-Tech)
 - [Natalia Baptista](https://github.com/nanab210)
 - [Tyler Thietje](https://github.com/tylerthietje)
 - [Josh Catlett](https://github.com/xITSDUCKYx) aka (xITSDUCKYx)
