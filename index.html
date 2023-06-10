@@ -138,15 +138,16 @@
         
     </div>
 
-    <!----- Error message Modal ------>
-    <div class = "modal" id="error-modal">
+    <!----- Squares Error message Modal ------>
+    <div class="modal" id="error-modal">
       <div class="modal-content">
-        <h2>You missed some squares.</h2>
-        <button 
+        <h1>Ooops! The number of squares selected don't match what you rolled! Try Again!</h1>
+        <button
+        id="try-again" 
         class="cancel-btn red-btn" 
-        onclick="closeAlertModal()"
+        onclick="closeErrorModal()"
         >
-        Take Me Back</button>
+        Try Again</button>
       </div>
     </div> 
 
