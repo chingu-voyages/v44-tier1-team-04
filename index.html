@@ -126,8 +126,8 @@
         <button 
           class="confirm-btn green-btn"
           onclick="clearBoard(),
-                   clearDiceBoard(),
-                   closeAlertModal()"
+                  clearDiceBoard(),
+                  closeAlertModal()"
           >
           Start Over</button>
         <button 
@@ -137,6 +137,18 @@
           Take Me Back</button>
         
     </div>
+
+    <!----- Error message Modal ------>
+    <div class = "modal" id="error-modal">
+      <div class="modal-content">
+        <h2>You missed some squares.</h2>
+        <button 
+        class="cancel-btn red-btn" 
+        onclick="closeAlertModal()"
+        >
+        Take Me Back</button>
+      </div>
+    </div> 
 
     <!--------- End Game Game --------->
 

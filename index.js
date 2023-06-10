@@ -32,6 +32,7 @@ function closeAlertModal() {
   alertModal.classList.remove("show-modal");
 }
 
+
 /* ------------ End Game Modal ----------- */
 
 const endGame = document.getElementById("end-game");
@@ -127,9 +128,15 @@ function rollTheDice() {
   return total;
 }
 
-  function submitHandler () {
-    diceBtn.disabled = false;
-  }    
+var errorModal = document.getElementById("error-modal");
+function submitHandler () {
+    if(aquaCount < total){
+      errorModal.style.display = "block";
+    }else{
+      diceBtn.disabled = false;
+    }
+   
+  }
 
 /*----------- Clearing the Grid ------------*/
 function clearBoard() {
