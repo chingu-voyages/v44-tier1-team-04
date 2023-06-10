@@ -144,6 +144,7 @@ function clearBoard() {
   squares.forEach((column) => {
     column.style.backgroundColor = "gray";
   });
+  diceBtn.disabled = false;
 }
 
 /*----------- Clearing the Dice ------------*/
