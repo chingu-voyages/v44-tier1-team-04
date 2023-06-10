@@ -80,7 +80,8 @@ function updateLearderboard() {
 /*---------- Coloring the Boxes --------------*/
 let gridBox = document.querySelectorAll('.column');
 let diceBtn = document.getElementById('dice');
-var aquaCount = 0;
+let aquaCount = 0;
+let grayCount = 100;
 
 gridBox.forEach(function (gridBox) {
   gridBox.addEventListener('mousedown', () => {
@@ -89,9 +90,15 @@ gridBox.forEach(function (gridBox) {
     if (currentColor === 'gray' || currentColor === '') {
       gridBox.style.backgroundColor = 'aqua';
       aquaCount += 1;
-      console.log(aquaCount);
-    } else {
+      grayCount -= 1;
+      console.log('Aqua Count:', aquaCount);
+      console.log('Gray Count:', grayCount);
+    } else if (currentColor === 'aqua') {
       gridBox.style.backgroundColor = 'gray';
+      aquaCount -= 1;
+      grayCount += 1;
+      console.log('Aqua Count:', aquaCount);
+      console.log('Gray Count:', grayCount);
     }
   });
 });
