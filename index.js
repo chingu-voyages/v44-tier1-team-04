@@ -1,6 +1,7 @@
 /* ---------- Global Variables ---------- */
 const confirmBtn = document.querySelector('confirm-btn');
 const cancelBtn = document.querySelector('cancel-btn');
+let isMouseDown = false;
 
 /* ---------- Start Game Modal ---------- */
 const modal = document.getElementById('startModal');
@@ -85,23 +86,37 @@ let grayCount = 100;
 
 gridBox.forEach(function (gridBox) {
   gridBox.addEventListener('mousedown', () => {
-    let currentColor = gridBox.style.backgroundColor;
+    isMouseDown = true;
+    changeColor(gridBox);
+  });
 
-    if (currentColor === 'gray' || currentColor === '') {
-      gridBox.style.backgroundColor = 'aqua';
-      aquaCount += 1;
-      grayCount -= 1;
-      console.log('Aqua Count:', aquaCount);
-      console.log('Gray Count:', grayCount);
-    } else if (currentColor === 'aqua') {
-      gridBox.style.backgroundColor = 'gray';
-      aquaCount -= 1;
-      grayCount += 1;
-      console.log('Aqua Count:', aquaCount);
-      console.log('Gray Count:', grayCount);
+  gridBox.addEventListener('mouseover', () => {
+    if (isMouseDown) {
+      changeColor(gridBox);
     }
   });
+
+  gridBox.addEventListener('mouseup', () => {
+    isMouseDown = false;
+  });
 });
+function changeColor(gridBox) {
+  let currentColor = gridBox.style.backgroundColor;
+
+  if (currentColor === 'gray' || currentColor === '') {
+    gridBox.style.backgroundColor = 'aqua';
+    aquaCount += 1;
+    grayCount -= 1;
+    console.log('Aqua Count:', aquaCount);
+    console.log('Gray Count:', grayCount);
+  } else if (currentColor === 'aqua') {
+    gridBox.style.backgroundColor = 'gray';
+    aquaCount -= 1;
+    grayCount += 1;
+    console.log('Aqua Count:', aquaCount);
+    console.log('Gray Count:', grayCount);
+  }
+}
 
 /*----------- Dice roll ------------- */
 var total = 0;
@@ -117,7 +132,6 @@ function rollTheDice() {
   diceRoll1.innerText = d1;
   diceRoll2.innerText = d2;
   diceBtn.disabled = true;
-  return total;
 }
 
 /*----------- Squares Error Message Modal ------------*/
@@ -128,9 +142,17 @@ function submitHandler() {
   if (aquaCount !== total) {
     // errorModal.style.display = "block";
     errorModal.classList.add('show-modal');
-  } else {
+  } else if (aquaCount == total) {
     diceBtn.disabled = false;
     aquaCount = 0;
+  }
+  
+  if (grayCount < total) {
+    alert('You win!');
+    isWinner = true;
+    clearBoard();
+    clearDiceBoard();
+    updateLearderboard();
   }
 }
 
